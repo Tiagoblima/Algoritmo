@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc}  
+
+
+     
+\sloppy
+
+\title{Relatorio EP-1}
+
+\author{Tiago Barbosa de Lima{1}}
+
+
+\address{Universidade Federal Rual de Pernambuco--PE -- Brazil
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+  
+ This report will show the collected date from the executions of some algorithms that
+  use the characteristic of division and conquest comparing with the iterative algorithms and analyze their behavior using the getting graphics from the collected dates.
+\end{abstract}
+     
+\begin{resumo} 
+    Este relat�rio mostra os dados coletados a partida da execucao de alguns algoritmos do tipo de divis�o e conquista comparando-os com os iterativos e analisando o seus comportamentos a parti dos gr�ficos obtidos a partir desses dados.
+\end{resumo}
+
+
+\section{Informa��es gerais}
+
+
+Os teste foram realizados usando a IDE devc++ para a elabora��o dos 
+algoritmos. Alem disso todos os algoritmos foram executados a parti de um �nico .c.
+ As chamadas de cada algoritmo foi feita a parti de  uma fun��o que continha a vers�o 
+ interativa e recursiva dele e por sua vez tais fun��es eram chamadas no "main".Foram definidas as constantes N para o valor m�ximo e PASSO para o tamanho a ser acrescento a entrada a cada primeira chama de cada fun��o.
+
+
+
+
+
+\section{Algoritmo 1} \label{sec:MAX}
+
+O algoritmo MAX-REC e MAX-IT divis�o e conquista e iterativo:
+
+Os algoritmos a seguir t�m como objetivo devolver o 
+maior numero encontrado em um vetor de inteiros encontrado.Foram gerados valores aleat�rios de inteiros baseados no tamanho da entrada.eg.: Para n igual a 2000 os valores gerados s�o entre 0 e 1999 e assim por diante.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graficos/MAX_REC}
+	\caption[MAX-REC]{Para realizar as 
+		opera��es ele recebe como argumento um vetor de inteiros,
+		a posi��o inicial e final.Ao finalizar devolve o maior valor.O gr�fico de quantidade de opera��es realizados pela fun��o MAX-REC em rela��o ao tamanho da entrada.}
+	\label{fig:maxrec}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graficos/MAX_IT}
+	\caption[Gr�fico da fun��o MAX-IT]{A fun��o MAX-IT recebe como argumento um vetor de inteiros, e o seu tamanho para n maior ou igual a 0, e devolve o maior valor encontrado.Demonstra a quantidade de opera��es em rela��o ao tamanho da entrada.}
+	\label{fig:maxit}
+\end{figure}
+
+\paragraph{Observa��es a parti dos gr�ficos: } Analisando o gr�fico obtido a parti da execu��o da fun��o MAX-REC podemos afirmar que ela tem complexidade logar�tmica, ou seja ainda que para instancias de tamanhos grandes poucas opera��es s�o realizadas.Enquanto isso a fun��o MAX-IT que realiza o mesmo procedimento de encontrar o m�ximo valor em vetor de inteiros, mas de maneira iterativa tem complexidade linear, ou seja, a quantidade de opera��es realizadas � exatamente proporcional ao tamanho da entrada como ilustra o gr�fico obtido.Portanto o algoritmo recursivo mostra-se mais eficiente do que o iterativo a parti das informa��es obtidas a parti dos gr�ficos acima.
+
+\section{Algoritmo 2}\label{sec:CRESC}
+
+
+	Informa��es preliminares: Os algoritmos a seguir t�m como objetivo 
+	verificar se um vetor de inteiros est� em ordem crescente ou n�o.Os valores atribu�dos ao vetor v v�o de o at� n-1.
+	
+	\subsection{Gr�ficos}
+   \begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Graficos/CRESC_REC}
+		\caption[Gr�fico CRESC-REC]{A fun��o CRESC-REC recebe como argumento um vetor de inteiros e seu tamanho para n maior ou igual a 0, e devolve 1 se o vetor estiver ordenado e o sen�o devolve 1, se os valores forem iguais ele devolve a posi��o encontrada.O gr�fico mostra a quantidade de opera��es em rela��o ao tamanho da entrada.}
+		\label{fig:crescrec}
+	\end{figure}
+
+	\subsection{An�lise}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Graficos/CRESC_IT}
+		\caption[Gr�fico CRESC-IT]{A fun��o CRESC-IT recebe como argumento um vetor de inteiros e seu tamanho para n maior ou igual a 0 e devolve 1 se o vetor estiver ordenado e 0 sen�o}
+		\label{fig:crescit}
+	\end{figure}
+
+
+	 \paragraph{Observa��es a parti dos gr�ficos: }  Assim como no gr�fico de MAX-REC o gr�fico de CRESC-REC demonstrar ter uma complexidade logar�tmica para resolu��o do  problema em quest�o enquanto o algoritmo CRESC-IT assim como MAX-IT possui uma complexidade proporcional ao tamanho da entrada n realizando portanto o mesmo ou similar quantidade de opera��es.Portanto o algoritmo recursivo mostra-se mais eficiente do que o iterativo a parti das informa��es obtidas a parti dos gr�ficos acima.
+
+
+
+
+
+
+
+
+\section{Algoritmo 3} \label{sec:LOC}
+
+Os algoritmos a seguir foram desenvolvidos com objetivo de localizar a posi��o do valor m�ximo em vetor de inteiros de tamanho n.
+
+
+ \begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graficos/LOC_REC}
+	\caption[Gr�fico LOC-REC]{A fun��o LOC-REC recebe como argumento um vetor de inteiros e o trecho e inicial e final do trecho analisado, e devolve a posi��o do valor x encontrado ou o que mais se aproxima baseado no LOC-IT feito em sala.}
+	\label{fig:locrec}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graficos/LOC_IT}
+	\caption[Gr�fico LOC-IT]{A fun��o LOC-IT recebe como argumento um vetor de inteiros o seu tamanho o valor e o x a serem encontrado e devolve a sua posi��o ou a posi��o relativa ao valor mais pr�ximo.Obs.: Algoritmo feito na sala de aula.}
+	\label{fig:locit}
+\end{figure}
+
+
+ \paragraph{Observa��es a parti dos gr�ficos: } Diferentemente dos algoritmos anteriores em que o algoritmo recursivo se mostrava ter uma complexidade melhor do que a do iterativo, podemos observar que a depender da posi��o do valor a ser encontrado ambos algoritmos (recursivo e iterativo) t�m a mesma complexidade.Portanto ambos os dois mostram-se eficientes a parti das informa��es obtidas a parti dos gr�ficos acima.
+ 
+ \section{Algoritmo 4} \label{sec: SEG}
+ Os algoritmos a seguir t�m como objetivo encontrar o valor da soma m�xima dentro de um vetor de inteiros e devolver esse valor.No caso do vetor ser formado por apenas n�meros negativos o valor devolvido ser� o valor menos negativo.
+ 
+
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth]{Graficos/SEG_REC}
+ 	\caption[Gr�fico SEG-REC]{A fun��o SEG-REC recebe como argumento um vetor de inteiros e seu tamanho para n maior ou igual a 0, al�m da valor inicial da soma que deve ser 0 e devolve o maior seguimento de soma do vetor de entrada. Fonte: https://www.ime.usp.br/~pf/livrinho-AA/AA-BOOKLET.pdf}
+ 	\label{fig:segrec}
+ \end{figure}
+
+ \pagebreak
+ \begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graficos/SEG_IT}
+	\caption[Gr�fico SEG-IT]{A fun��o SEG-IT recebe como argumento um vetor de inteiros e seu tamanho para n maior ou igual a 0 e devolve a soma do vetor v m�xima FONTE: https://www.ime.usp.br/~pf/livrinho-AA/AA-BOOKLET.pdf}
+	\label{fig:segit}
+\end{figure}
+
+
+ \paragraph{Observa��es a parti dos gr�ficos: } 
+Neste gr�ficos podemos observar que o algoritmo iterativo apresenta uma complexidade exponencial tendo que realizar uma quantidade enorme de opera��es. Enquanto o algoritmo recursivo a presenta uma complexidade logar�tmica realizando um quantidade menor de opera��es apesar da entrada ser grande.
+
+
+
+\section{Refer�ncia}
+
+https://www.ime.usp.br/~pf/livrinho-AA/AA-BOOKLET.pdf
+
+https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+\end{document}
